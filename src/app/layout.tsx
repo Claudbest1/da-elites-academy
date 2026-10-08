@@ -30,6 +30,21 @@ export const metadata: Metadata = {
     siteName: site.name,
     locale: "en_NG",
     type: "website",
+    url: site.url,
+    images: [
+      {
+        url: "/og.png",
+        width: 1200,
+        height: 630,
+        alt: "DA ELITES Virtual Tutoring",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: site.name,
+    description: site.description,
+    images: ["/og.png"],
   },
 };
 

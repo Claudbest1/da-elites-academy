@@ -10,7 +10,7 @@ export const site = {
   linkedin: "https://www.linkedin.com/company/da-elites-virtual-tutoring",
   location: "Nigeria",
   format: "Live classes on Zoom",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://daeliteacademy.netlify.app",
 };
 
 export const containerClass = "mx-auto w-full max-w-6xl px-5 sm:px-8";
