@@ -1,26 +1,116 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-outfit), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-fraunces), ui-serif, Georgia, "Times New Roman", serif;
+  --color-ink: #0e1c2f;
+  --color-ink-soft: #24364c;
+  --color-blue: #1877b5;
+  --color-blue-deep: #0a3356;
+  --color-navy: #07192c;
+  --color-terra: #d3543c;
+  --color-terra-deep: #9a341f;
+  --color-paper: #f4f7fb;
+  --color-sand: #e7eef4;
+  --color-mist: #3e4c5c;
+  --color-line: #d5e0ea;
+  --shadow-card: 0 10px 30px rgb(7 25 44 / 0.08);
+  --shadow-card-hover: 0 22px 44px rgb(7 25 44 / 0.16);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: var(--color-sand);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    overflow-x: clip;
+  }
+
+  h1,
+  h2,
+  h3,
+  p {
+    text-wrap: wrap;
+    overflow-wrap: break-word;
+  }
+
+  ::selection {
+    background: #8c2f1e;
+    color: #fff;
+  }
+
+  :focus-visible {
+    outline: 2px solid #8c2f1e;
+    outline-offset: 3px;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  .surface-rest,
+  .surface-card {
+    border: 1px solid rgb(213 224 234 / 0.9);
+    border-radius: 1.25rem;
+    background: #fff;
+    box-shadow: var(--shadow-card);
+  }
+
+  .surface-card {
+    transition:
+      transform 0.45s ease,
+      box-shadow 0.45s ease;
+  }
+
+  .surface-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-card-hover);
+  }
+
+  .slide-copy {
+    animation: rise 0.7s ease both;
+  }
+
+  .kenburns {
+    animation: kenburns 14s ease-out forwards;
+  }
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes kenburns {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .surface-card,
+  .surface-card:hover {
+    transform: none;
+    transition: none;
+  }
+
+  .slide-copy,
+  .kenburns {
+    animation: none;
+  }
 }
