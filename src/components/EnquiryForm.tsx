@@ -4,7 +4,18 @@ import { FormEvent, useState } from "react";
 import { site } from "@/lib/site";
 import { subjects } from "@/lib/subjects";
 
-const exams = ["WAEC", "JAMB", "IELTS", "TOEFL", "Junior or senior school support"];
+const exams = [
+  "US curriculum",
+  "SAT or AP",
+  "College math",
+  "French",
+  "Yoruba",
+  "Coding",
+  "WAEC",
+  "JAMB",
+  "IELTS",
+  "TOEFL",
+];
 const formats = ["One-to-one", "Small group", "Not sure yet"];
 
 type Errors = Partial<Record<"name" | "email" | "exam" | "subject" | "message", string>>;

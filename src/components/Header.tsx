@@ -43,7 +43,7 @@ function HeaderBar({ pathname }: { pathname: string }) {
 					className={`${containerClass} flex items-center justify-between gap-3 py-2 text-xs sm:text-sm`}
 				>
 					<p className="min-w-0 leading-snug">
-						Live Zoom classes for WAEC, JAMB, IELTS, and TOEFL
+						Live Zoom classes for students in the United States
 					</p>
 					<Link
 						href="/book"

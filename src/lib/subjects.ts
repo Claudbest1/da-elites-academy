@@ -373,6 +373,147 @@ export const subjects: Subject[] = [
       },
     ],
   },
+  {
+    slug: "french",
+    name: "French",
+    kicker: "Speaking, reading, and school French",
+    summary:
+      "French is taught live for students in the United States who need school French or a stronger command of everyday speaking and writing.",
+    image: img("photo-1502602898657-3e91760cbb34"),
+    imageAlt: "A street in a French-speaking city",
+    stages: [
+      {
+        id: "foundations",
+        label: "Foundations",
+        summary:
+          "Early lessons build sounds, useful sentences, and the grammar a student needs to say something of their own.",
+        points: [
+          "Pronunciation and common phrases",
+          "Present-tense sentences",
+          "Vocabulary for school and daily life",
+          "Short listening and speaking practice",
+        ],
+      },
+      {
+        id: "school",
+        label: "School French",
+        summary:
+          "Classes follow the French course a student is taking, including the reading and writing their teacher assigns.",
+        points: [
+          "Grammar in the context of a task",
+          "Reading a short text",
+          "Writing a paragraph that answers the prompt",
+          "Homework reviewed in the next lesson",
+        ],
+      },
+      {
+        id: "conversation",
+        label: "Conversation",
+        summary:
+          "Speaking practice is live. Students answer, extend, and correct a sentence while the tutor is still on the call.",
+        points: [
+          "Questions and longer answers",
+          "Describing a picture or a routine",
+          "Repairing a sentence in the moment",
+          "A short conversation each lesson",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "yoruba",
+    name: "Yoruba",
+    kicker: "Speaking, reading, and heritage language",
+    summary:
+      "Yoruba lessons are for beginners and for students who hear the language at home and want to speak, read, and write it with more control.",
+    image: img("photo-1524995997946-a1c2e315a42f"),
+    imageAlt: "Open books on a table",
+    stages: [
+      {
+        id: "beginners",
+        label: "Beginners",
+        summary:
+          "The first lessons cover greetings, tones, and sentences a student can use with family.",
+        points: [
+          "Sounds and tone",
+          "Greetings and introductions",
+          "Family, home, and everyday words",
+          "Short spoken exchanges",
+        ],
+      },
+      {
+        id: "speaking",
+        label: "Speaking",
+        summary:
+          "Students practise saying more than a memorised line: a question, an answer, and a correction.",
+        points: [
+          "Questions and replies",
+          "Describing people and places",
+          "Listening to a short passage",
+          "Pronunciation checked live",
+        ],
+      },
+      {
+        id: "reading-writing",
+        label: "Reading and writing",
+        summary:
+          "Reading and writing come after the student can say the sentence. Lessons use short texts, not a pile of vocabulary.",
+        points: [
+          "Reading a short passage aloud",
+          "Writing simple sentences",
+          "Tone marks where they change the meaning",
+          "A small piece of writing to finish between classes",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "coding",
+    name: "Coding",
+    kicker: "Programs a student can explain",
+    summary:
+      "Coding lessons are for students in the United States who are starting to program, or who need help with a school computing class. Each lesson ends with code the student wrote.",
+    image: img("photo-1461749280684-dccba630e2f6"),
+    imageAlt: "Programming code on a screen",
+    stages: [
+      {
+        id: "foundations",
+        label: "Foundations",
+        summary:
+          "Students learn how a program runs: instructions, decisions, and repetition, written in code they can read back.",
+        points: [
+          "Values, variables, and simple output",
+          "Conditions and loops",
+          "Finding an error in a short program",
+          "A first program written in class",
+        ],
+      },
+      {
+        id: "school",
+        label: "School computing",
+        summary:
+          "If a student already has a class, the lesson follows that assignment and the ideas it depends on.",
+        points: [
+          "The current assignment, unpacked",
+          "Functions and organising code",
+          "Testing a result instead of guessing",
+          "Homework the student can finish alone",
+        ],
+      },
+      {
+        id: "projects",
+        label: "Small projects",
+        summary:
+          "A project gives the ideas a job. Students build something small and explain how it works.",
+        points: [
+          "Planning a small program before coding",
+          "Breaking a task into steps",
+          "Improving a program that already runs",
+          "Showing the result and the reasoning",
+        ],
+      },
+    ],
+  },
 ];
 
 export function getSubject(slug: string) {

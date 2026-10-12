@@ -6,7 +6,6 @@ const menu = [
   { href: "/privacy", label: "Privacy Policy" },
   { href: "/terms", label: "Terms of Use" },
   { href: "/contact", label: "Help & Support" },
-  { href: "/about", label: "About Us" },
 ];
 
 export function Footer() {
@@ -16,11 +15,20 @@ export function Footer() {
       <div className={`${containerClass} grid gap-12 py-16 sm:grid-cols-2 lg:grid-cols-4`}>
         <div className="sm:col-span-2 lg:col-span-1">
           <Logo tone="light" />
-          <h2 className="mt-8 text-xs font-bold uppercase tracking-[0.18em] text-white/60">About us</h2>
-          <p className="mt-3 max-w-sm text-sm leading-relaxed text-white/80">
-            {site.legalName} teaches live virtual classes for WAEC, JAMB, IELTS, and TOEFL.
-            Lessons are small, exam-specific, and held on Zoom.
-          </p>
+          <ul className="mt-8 space-y-2 text-sm text-white/85">
+            <li>
+              <a href={`mailto:${site.email}`} className="hover:text-white">
+                {site.email}
+              </a>
+            </li>
+            {site.phones.map((phone) => (
+              <li key={phone}>
+                <a href={`tel:${phone}`} className="hover:text-white">
+                  {phone}
+                </a>
+              </li>
+            ))}
+          </ul>
         </div>
 
         <div>
@@ -55,11 +63,6 @@ export function Footer() {
             <li>
               <a href={site.linkedin} className="hover:text-white" target="_blank" rel="noopener noreferrer">
                 LinkedIn
-              </a>
-            </li>
-            <li>
-              <a href={`mailto:${site.email}`} className="hover:text-white">
-                {site.email}
               </a>
             </li>
             <li>{site.location}</li>

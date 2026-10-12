@@ -7,9 +7,9 @@ import { containerClass } from "@/lib/site";
 
 const slides = [
   {
-    eyebrow: "Virtual tutoring · Nigeria",
-    title: "Prepare for the paper, not a generic lesson.",
-    text: "Da’Elites Academy runs live classes for WAEC, JAMB, IELTS, and TOEFL. Mathematics, English, and the sciences are taught to the stage a student is sitting.",
+    eyebrow: "Live tutoring · United States",
+    title: "Personalised tutoring. Stronger results. Greater confidence.",
+    text: "Expert online tutoring for students across the USA. From SAT and AP preparation to college math, French, Yoruba, and coding, every lesson is tailored to help students thrive.",
     image:
       "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=2000&q=80",
     imageAlt: "A student writing notes at a desk",
@@ -17,9 +17,9 @@ const slides = [
     secondary: { href: "/curriculum", label: "Our curriculum" },
   },
   {
-    eyebrow: "WAEC and JAMB",
-    title: "School papers, taught live.",
-    text: "Objective practice, theory working, and Use of English. Lessons stay with the paper a student is actually sitting, in a one-to-one or a small group.",
+    eyebrow: "US curriculum",
+    title: "The class your student is actually in.",
+    text: "Homework help and subject teaching stay with the grade and the programme, from elementary school through high school, SAT, AP, and college mathematics.",
     image:
       "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=2000&q=80",
     imageAlt: "Students in a classroom",
@@ -27,14 +27,14 @@ const slides = [
     secondary: { href: "/start-studying", label: "How to join" },
   },
   {
-    eyebrow: "IELTS and TOEFL",
-    title: "International English, one paper at a time.",
-    text: "Listening, reading, writing, and speaking are trained on their own criteria, then sat together so timing becomes familiar.",
+    eyebrow: "Languages and coding",
+    title: "French, Yoruba, and coding, taught live.",
+    text: "Language lessons build speaking and writing a student can use. Coding lessons build a program the student can explain. Both sit beside the academic subjects.",
     image:
       "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=2000&q=80",
     imageAlt: "Students working together around a laptop",
-    primary: { href: "/curriculum/ielts", label: "IELTS syllabus" },
-    secondary: { href: "/curriculum/toefl", label: "TOEFL syllabus" },
+    primary: { href: "/curriculum/french", label: "French" },
+    secondary: { href: "/curriculum/coding", label: "Coding" },
   },
 ];
 

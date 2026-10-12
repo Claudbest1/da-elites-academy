@@ -24,7 +24,7 @@ export const tutors: Tutor[] = [
   {
     id: "joseph-nwanjo",
     name: "Joseph Nwanjo",
-    role: "Online English, Literature and ELA Tutor",
+    role: "Literature and ELA Tutor",
     tagline: "Helping students read better, write better, think better, and perform better.",
     facts: [
       "15+ years of teaching experience",
@@ -477,7 +477,7 @@ export const tutors: Tutor[] = [
   {
     id: "omowunmi-folarin",
     name: "Omowunmi Folarin",
-    role: "English Tutor for SATs, 11+ and GCSE English",
+    role: "ELA Tutor",
     tagline:
       "Many children don’t struggle with English because they can’t do it. They struggle because nobody has shown them exactly how to answer the question in front of them. That is the gap she closes.",
     facts: [
@@ -556,7 +556,7 @@ export const tutors: Tutor[] = [
   {
     id: "oluwole-samuel",
     name: "Oluwole Samuel",
-    role: "Biology and Chemistry Tutor",
+    role: "Mathematics, Biology and Chemistry Tutor",
     tagline:
       "A Mathematics and Science educator with a background in microbiology, laboratory technology, marine engineering, STEM, and health and safety.",
     facts: [
@@ -737,7 +737,7 @@ export const tutors: Tutor[] = [
   {
     id: "oparinde-samuel-oluwadamilare",
     name: "Oparinde Samuel Oluwadamilare",
-    role: "Mathematics, Further Mathematics, and Physics Tutor",
+    role: "Mathematics and Physics Tutor",
     tagline:
       "He connects abstract mathematics with practical use, and uses what students’ work shows to help them succeed.",
     facts: [
@@ -800,7 +800,7 @@ export const tutors: Tutor[] = [
   {
     id: "aturamu-damilola",
     name: "Aturamu Damilola",
-    role: "Mathematics and Technical Drawing Tutor",
+    role: "Mathematics, AP Statistics, SAT Math, and College Math Tutor",
     tagline:
       "Clear, engaging teaching that helps students master difficult ideas and grow more confident at solving problems.",
     facts: [
@@ -872,7 +872,7 @@ export const tutors: Tutor[] = [
   {
     id: "victor-ayokunle-atunramu",
     name: "Victor Ayokunle Atunramu",
-    role: "Academic Tutor",
+    role: "Mathematics and Physics Tutor",
     tagline:
       "Academic support tailored to international curricula and higher education.",
     facts: [
