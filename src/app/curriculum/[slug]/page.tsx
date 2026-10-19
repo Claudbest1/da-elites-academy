@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ButtonLink } from "@/components/ButtonLink";
+import { PageHeroBand } from "@/components/PageHero";
 import { containerClass } from "@/lib/site";
 import { getSubject, subjects } from "@/lib/subjects";
 
@@ -30,7 +31,7 @@ export default async function SubjectPage({ params }: SubjectPageProps) {
 
   return (
     <article>
-      <header className="bg-blue text-white">
+      <PageHeroBand as="header">
         <div className={`${containerClass} py-14 sm:py-20`}>
           <p className="text-sm text-white/70">
             <Link href="/" className="hover:text-white">
@@ -49,7 +50,7 @@ export default async function SubjectPage({ params }: SubjectPageProps) {
           <h1 className="mt-3 max-w-3xl font-display text-4xl text-white sm:text-6xl">{subject.name}</h1>
           <p className="mt-5 max-w-2xl text-lg leading-relaxed text-white/80">{subject.summary}</p>
         </div>
-      </header>
+      </PageHeroBand>
 
       <div className={`${containerClass} grid gap-12 py-14 lg:grid-cols-[240px_1fr] lg:py-20`}>
         <aside className="h-fit rounded-2xl border border-line bg-white p-5 shadow-[var(--shadow-card)] lg:sticky lg:top-28">

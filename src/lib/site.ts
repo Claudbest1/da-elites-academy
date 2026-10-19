@@ -82,7 +82,7 @@ export const programmes = [
 	{
 		id: "uk-curriculum",
 		title: "UK curriculum support (Years 1–A-Levels)",
-		image: programmeImage("photo-1523050854058-8df90110c9f1"),
+		image: programmeImage("photo-1562774053-701939374585"),
 		imageAlt: "Historic university campus buildings",
 		intro:
 			"Tutoring mapped to the National Curriculum for England, supporting all key stages up to university entrance.",

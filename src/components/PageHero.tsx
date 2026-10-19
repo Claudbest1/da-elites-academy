@@ -1,4 +1,24 @@
+import type { ReactNode } from "react";
 import { containerClass } from "@/lib/site";
+
+export function PageHeroBand({
+	as: Tag = "section",
+	children,
+}: {
+	as?: "section" | "header";
+	children: ReactNode;
+}) {
+	return (
+		<Tag className="relative overflow-hidden bg-[#07192c] text-white">
+			<div
+				aria-hidden
+				className="pointer-events-none absolute inset-0 bg-cover bg-center"
+				style={{ backgroundImage: "url('/hero/page-hero-bg.jpg')" }}
+			/>
+			<div className="relative z-10">{children}</div>
+		</Tag>
+	);
+}
 
 export function PageHero({
 	eyebrow,
@@ -10,7 +30,7 @@ export function PageHero({
 	lede: string;
 }) {
 	return (
-		<section className="bg-blue-deep text-white">
+		<PageHeroBand>
 			<div className={`${containerClass} slide-copy py-14 sm:py-20`}>
 				<p className="text-xs font-bold uppercase tracking-[0.22em] text-[#f0b2a4]">
 					{eyebrow}
@@ -22,6 +42,6 @@ export function PageHero({
 					{lede}
 				</p>
 			</div>
-		</section>
+		</PageHeroBand>
 	);
 }
