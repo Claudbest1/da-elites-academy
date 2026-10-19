@@ -3,14 +3,15 @@ import Link from "next/link";
 import { ButtonLink } from "@/components/ButtonLink";
 import { CountUp } from "@/components/CountUp";
 import { HeroSlider } from "@/components/HeroSlider";
+import { MissionVision } from "@/components/MissionVision";
 import { Reveal } from "@/components/Reveal";
-import { containerClass, programmes } from "@/lib/site";
+import { academyCopy, containerClass, programmes } from "@/lib/site";
 import { subjects } from "@/lib/subjects";
 
 const stats = [
-  { value: "12", label: "Qualified tutors" },
-  { value: "40", label: "Students enrolled" },
-  { value: "4+", label: "Countries" },
+  { value: "12", label: "Qualified tutors", color: "text-blue" },
+  { value: "40", label: "Students enrolled", color: "text-terra" },
+  { value: "4+", label: "Countries", color: "text-[#1f8a4c]" },
 ];
 
 const reasons = [
@@ -53,46 +54,33 @@ export default function HomePage() {
       <HeroSlider />
 
       <section className="bg-white">
-        <div className={`${containerClass} grid gap-4 py-8 sm:grid-cols-3`}>
+        <div className={`${containerClass} grid grid-cols-3 gap-2 py-4 sm:gap-4 sm:py-8`}>
           {stats.map((stat) => (
-            <article key={stat.label} className="rounded-2xl bg-sand px-5 py-6 text-center ring-1 ring-line">
-              <p className="font-display text-4xl text-blue-deep" aria-label={stat.value}>
+            <article key={stat.label} className="px-1 py-2 text-center sm:px-5 sm:py-6">
+              <p className={`font-display text-3xl ${stat.color} sm:text-6xl`} aria-label={stat.value}>
                 <CountUp value={stat.value} />
               </p>
-              <p className="mt-2 text-sm font-semibold text-ink">{stat.label}</p>
+              <p className="mt-1 text-[11px] font-semibold leading-tight text-ink sm:mt-2 sm:text-sm">
+                {stat.label}
+              </p>
             </article>
           ))}
         </div>
       </section>
 
       <section className="bg-sand">
-        <div className={`${containerClass} grid gap-6 py-16 lg:grid-cols-2 lg:py-20`}>
+        <div className={`${containerClass} py-8 sm:py-20`}>
           <Reveal>
-            <article className="surface-rest h-full p-7 sm:p-8">
-              <p className="text-xs font-bold uppercase tracking-[0.22em] text-terra-deep">Mission</p>
-              <p className="mt-4 font-display text-3xl leading-snug text-ink">
-                Live tutoring for students in the United States, matched to the class they are in.
-              </p>
-              <p className="mt-4 leading-relaxed text-ink-soft">
-                A lesson is one-to-one or a small group on Zoom. The tutor stays with the grade,
-                the subject, and the work the student needs to do next.
-              </p>
-            </article>
-          </Reveal>
-          <Reveal delay={80}>
-            <article className="surface-rest h-full p-7 sm:p-8">
-              <p className="text-xs font-bold uppercase tracking-[0.22em] text-terra-deep">Vision</p>
-              <p className="mt-4 font-display text-3xl leading-snug text-ink">
-                Students who can use what they learn in class, on a test, and on their own.
-              </p>
-              <p className="mt-4 leading-relaxed text-ink-soft">
-                The academy wants that confidence across academics, French, Yoruba, and coding,
-                for families in the United States and beyond.
-              </p>
-            </article>
+            <h2 className="max-w-3xl font-display text-4xl text-ink sm:text-5xl">
+              {academyCopy.hookEyebrow}
+            </h2>
+            <p className="mt-5 max-w-3xl text-base leading-relaxed text-ink-soft sm:text-lg">
+              {academyCopy.hook}
+            </p>
           </Reveal>
         </div>
       </section>
+      <MissionVision />
 
       <section className="bg-white">
         <div className={`${containerClass} py-16 sm:py-20`}>
@@ -118,30 +106,38 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="border-y border-line bg-paper">
+      <section className="bg-[#b8442e]">
         <div className={`${containerClass} py-16 sm:py-20`}>
           <Reveal>
-            <p className="text-xs font-bold uppercase tracking-[0.22em] text-terra-deep">Programmes</p>
-            <h2 className="mt-3 max-w-2xl font-display text-4xl text-ink sm:text-5xl">
+            <p className="text-xs font-bold uppercase tracking-[0.22em] text-white/80">Programmes</p>
+            <h2 className="mt-3 max-w-2xl font-display text-4xl text-white sm:text-5xl">
               Support for international curricula and college mathematics.
             </h2>
-            <p className="mt-4 max-w-2xl leading-relaxed text-ink-soft">
+            <p className="mt-4 max-w-2xl leading-relaxed text-white/90">
               Da’Elites’ Virtual Academy offers academic coaching mapped to the US, UK, and Canadian
               school programmes, and a college mathematics course for university-level work.
             </p>
           </Reveal>
-          <div className="mt-10 grid gap-6 sm:grid-cols-2">
+          <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {programmes.map((programme) => (
-              <article key={programme.id} className="surface-card p-7">
-                <h3 className="font-display text-2xl text-ink">{programme.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-ink-soft">{programme.intro}</p>
-                <Link
-                  href={`/curriculum#${programme.id}`}
-                  className="mt-5 inline-flex text-xs font-bold uppercase tracking-[0.16em] text-blue-deep"
-                >
-                  Read the programme
-                </Link>
-              </article>
+              <Link
+                key={programme.id}
+                href={`/curriculum#${programme.id}`}
+                className="group relative block aspect-[3/4] overflow-hidden rounded-2xl bg-navy"
+              >
+                <Image
+                  src={programme.image}
+                  alt={programme.imageAlt}
+                  fill
+                  sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
+                  className="object-cover object-center transition-transform duration-700 group-hover:scale-105 motion-reduce:transition-none motion-reduce:group-hover:scale-100"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/40 to-transparent" />
+                <div className="absolute inset-x-0 bottom-0 p-5">
+                  <h3 className="font-display text-2xl leading-tight text-white">{programme.title}</h3>
+                  <p className="mt-1 text-sm text-white/80">Read the programme</p>
+                </div>
+              </Link>
             ))}
           </div>
         </div>

@@ -11,6 +11,12 @@ function isActive(pathname: string, href: string) {
 	return pathname === href || pathname.startsWith(`${href}/`);
 }
 
+function navClass(active: boolean, size: "sm" | "base" = "sm") {
+	return `${size === "sm" ? "text-sm" : "text-base"} font-semibold ${
+		active ? "text-terra" : "text-ink-soft hover:text-blue-deep"
+	}`;
+}
+
 export function Header() {
 	const pathname = usePathname();
 	return <HeaderBar key={pathname} pathname={pathname} />;
@@ -70,11 +76,7 @@ function HeaderBar({ pathname }: { pathname: string }) {
 							key={item.href}
 							href={item.href}
 							aria-current={isActive(pathname, item.href) ? "page" : undefined}
-							className={`text-sm font-semibold ${
-								isActive(pathname, item.href)
-									? "text-blue-deep"
-									: "text-ink-soft hover:text-blue-deep"
-							}`}
+							className={navClass(isActive(pathname, item.href))}
 						>
 							{item.label}
 						</Link>
@@ -87,11 +89,7 @@ function HeaderBar({ pathname }: { pathname: string }) {
 					>
 						<button
 							type="button"
-							className={`inline-flex items-center gap-1 text-sm font-semibold ${
-								academicsActive
-									? "text-blue-deep"
-									: "text-ink-soft hover:text-blue-deep"
-							}`}
+							className={`inline-flex items-center gap-1 ${navClass(academicsActive)}`}
 							aria-expanded={open}
 							aria-controls={menuId}
 							onClick={() => setOpen((value) => !value)}
@@ -116,7 +114,11 @@ function HeaderBar({ pathname }: { pathname: string }) {
 													isActive(pathname, item.href) ? "page" : undefined
 												}
 											>
-												<span className="block text-sm font-semibold text-ink">
+												<span
+													className={`block text-sm font-semibold ${
+														isActive(pathname, item.href) ? "text-terra" : "text-ink"
+													}`}
+												>
 													{item.label}
 												</span>
 												<span className="mt-1 block text-sm text-mist">
@@ -135,11 +137,7 @@ function HeaderBar({ pathname }: { pathname: string }) {
 							key={item.href}
 							href={item.href}
 							aria-current={isActive(pathname, item.href) ? "page" : undefined}
-							className={`text-sm font-semibold ${
-								isActive(pathname, item.href)
-									? "text-blue-deep"
-									: "text-ink-soft hover:text-blue-deep"
-							}`}
+							className={navClass(isActive(pathname, item.href))}
 						>
 							{item.label}
 						</Link>
@@ -195,7 +193,8 @@ function HeaderBar({ pathname }: { pathname: string }) {
 							<li key={item.href}>
 								<Link
 									href={item.href}
-									className="block py-3 text-base font-semibold"
+									aria-current={isActive(pathname, item.href) ? "page" : undefined}
+									className={`block py-3 ${navClass(isActive(pathname, item.href), "base")}`}
 								>
 									{item.label}
 								</Link>
@@ -208,7 +207,8 @@ function HeaderBar({ pathname }: { pathname: string }) {
 							<li key={item.href}>
 								<Link
 									href={item.href}
-									className="block py-2.5 pl-3 text-base font-semibold"
+									aria-current={isActive(pathname, item.href) ? "page" : undefined}
+									className={`block py-2.5 pl-3 ${navClass(isActive(pathname, item.href), "base")}`}
 								>
 									{item.label}
 								</Link>
@@ -218,7 +218,8 @@ function HeaderBar({ pathname }: { pathname: string }) {
 							<li key={item.href}>
 								<Link
 									href={item.href}
-									className="block py-3 text-base font-semibold"
+									aria-current={isActive(pathname, item.href) ? "page" : undefined}
+									className={`block py-3 ${navClass(isActive(pathname, item.href), "base")}`}
 								>
 									{item.label}
 								</Link>

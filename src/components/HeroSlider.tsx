@@ -10,9 +10,9 @@ const slides = [
     eyebrow: "Live tutoring · United States",
     title: "Personalised tutoring. Stronger results. Greater confidence.",
     text: "Expert online tutoring for students across the USA. From SAT and AP preparation to college math, French, Yoruba, and coding, every lesson is tailored to help students thrive.",
-    image:
-      "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=2000&q=80",
-    imageAlt: "A student writing notes at a desk",
+    image: "/hero/student-home.jpg",
+    imageAlt: "A student waving during an online lesson at home",
+    objectClass: "object-[62%_center]",
     primary: { href: "/book", label: "Book a session" },
     secondary: { href: "/curriculum", label: "Our curriculum" },
   },
@@ -20,9 +20,9 @@ const slides = [
     eyebrow: "US curriculum",
     title: "The class your student is actually in.",
     text: "Homework help and subject teaching stay with the grade and the programme, from elementary school through high school, SAT, AP, and college mathematics.",
-    image:
-      "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=2000&q=80",
-    imageAlt: "Students in a classroom",
+    image: "/hero/students-together.jpg",
+    imageAlt: "Students joining an online class together",
+    objectClass: "object-[center_42%]",
     primary: { href: "/curriculum/mathematics", label: "Explore subjects" },
     secondary: { href: "/start-studying", label: "How to join" },
   },
@@ -30,9 +30,9 @@ const slides = [
     eyebrow: "Languages and coding",
     title: "French, Yoruba, and coding, taught live.",
     text: "Language lessons build speaking and writing a student can use. Coding lessons build a program the student can explain. Both sit beside the academic subjects.",
-    image:
-      "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=2000&q=80",
-    imageAlt: "Students working together around a laptop",
+    image: "/hero/student-study.jpg",
+    imageAlt: "A student studying at a laptop with books",
+    objectClass: "object-[78%_center]",
     primary: { href: "/curriculum/french", label: "French" },
     secondary: { href: "/curriculum/coding", label: "Coding" },
   },
@@ -89,9 +89,9 @@ export function HeroSlider() {
             fill
             priority={itemIndex === 0}
             sizes="100vw"
-            className={`object-cover ${itemIndex === index ? "kenburns" : ""}`}
+            className={`object-cover ${item.objectClass} ${itemIndex === index ? "kenburns" : ""}`}
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-navy via-navy/82 to-navy/20" />
+          <div className="absolute inset-0 bg-gradient-to-r from-navy via-navy/80 to-navy/25" />
         </div>
       ))}
 

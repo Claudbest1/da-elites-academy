@@ -14,6 +14,21 @@ export const site = {
 	url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://daeliteacademy.netlify.app",
 };
 
+export const academyCopy = {
+	hookEyebrow: "Welcome to Da’Elites’ Virtual Academy",
+	hook:
+		"Guiding potential. Elevating flight. Welcome to Da’Elites’ Virtual Academy—where your child’s academic journey transforms into a journey of excellence.",
+	vision:
+		"Redefining digital education by nurturing self-assured, high-achieving scholars equipped for global academic excellence.",
+	mission:
+		"To deliver structured, engaging, and results-driven instruction in English, literature, and standardized test prep that turns every student’s hidden capability into proven achievement.",
+	aboutTitle: "Built for Your Child’s Real-World Curriculum",
+	about: [
+		"Your child already has a school day, a syllabus, and specific assignments to conquer. Da’Elites’ Virtual Academy is designed to keep the focus precisely on that work: grade by grade, subject by subject, test by test.",
+		"We teach virtually because excellence shouldn’t be limited by location. Your child doesn’t need to live down the street to access world-class mentorship; they just need to log in ready to engage. Together, we turn looming school stress into proven academic confidence.",
+	],
+};
+
 export const containerClass = "mx-auto w-full max-w-6xl px-5 sm:px-8";
 
 export const mainNav = [
@@ -46,10 +61,15 @@ export const academics = [
 	},
 ] as const;
 
+const programmeImage = (id: string) =>
+	`https://images.unsplash.com/${id}?auto=format&fit=crop&w=1200&q=80`;
+
 export const programmes = [
 	{
 		id: "us-curriculum",
 		title: "US curriculum support (Grades 1–12)",
+		image: programmeImage("photo-1509062522246-3755977927d7"),
+		imageAlt: "Students working together in a classroom",
 		intro:
 			"Structured academic coaching, homework help, and core subject mastery aligned with American state standards and Common Core guidelines.",
 		items: [
@@ -62,6 +82,8 @@ export const programmes = [
 	{
 		id: "uk-curriculum",
 		title: "UK curriculum support (Years 1–A-Levels)",
+		image: programmeImage("photo-1523050854058-8df90110c9f1"),
+		imageAlt: "Historic university campus buildings",
 		intro:
 			"Tutoring mapped to the National Curriculum for England, supporting all key stages up to university entrance.",
 		items: [
@@ -73,6 +95,8 @@ export const programmes = [
 	{
 		id: "canadian-curriculum",
 		title: "Canadian curriculum support (Grades 1–12)",
+		image: programmeImage("photo-1523240795612-9a054b0db644"),
+		imageAlt: "Students studying on a campus lawn",
 		intro:
 			"Curriculum-aligned support adapted to provincial educational standards across Canada.",
 		items: [
@@ -83,6 +107,8 @@ export const programmes = [
 	{
 		id: "college-mathematics",
 		title: "College mathematics",
+		image: programmeImage("photo-1635070041078-e363dbe005cb"),
+		imageAlt: "Mathematics equations on a chalkboard",
 		intro:
 			"A college math program that bridges secondary school and university-level academics.",
 		items: [

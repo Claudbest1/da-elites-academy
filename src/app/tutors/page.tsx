@@ -83,26 +83,25 @@ export default function TutorsPage() {
         lede="Profiles of the Da’Elites tutors, written from the details they provided."
       />
 
-      <section className="bg-sand">
-        <div className={`${containerClass} grid gap-6 py-14 md:grid-cols-2`}>
+      <section className="bg-white">
+        <div className={`${containerClass} grid gap-5 py-14 sm:grid-cols-2 lg:grid-cols-4`}>
           {tutors.map((tutor) => (
-            <a key={tutor.id} href={`#${tutor.id}`} className="group surface-card flex h-full overflow-hidden">
-              <div className="relative w-[38%] min-w-28 shrink-0 self-stretch bg-navy">
-                <Image
-                  src={tutor.image}
-                  alt={tutor.imageAlt}
-                  fill
-                  sizes="(min-width: 768px) 220px, 38vw"
-                  className="object-cover object-top transition-transform duration-700 group-hover:scale-105 motion-reduce:transition-none motion-reduce:group-hover:scale-100"
-                />
-              </div>
-              <div className="flex min-w-0 flex-1 flex-col p-5 sm:p-6">
-                <h2 className="font-display text-3xl text-ink">{tutor.name}</h2>
-                <p className="mt-2 text-sm font-semibold text-terra-deep">{tutor.role}</p>
-                <p className="mt-3 text-sm leading-relaxed text-ink-soft">{tutor.tagline}</p>
-                <span className="mt-4 inline-flex text-xs font-bold uppercase tracking-[0.16em] text-blue-deep">
-                  Read profile
-                </span>
+            <a
+              key={tutor.id}
+              href={`#${tutor.id}`}
+              className="group relative block aspect-[3/4] overflow-hidden rounded-2xl bg-navy"
+            >
+              <Image
+                src={tutor.image}
+                alt={tutor.imageAlt}
+                fill
+                sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
+                className="object-cover object-top transition-transform duration-700 group-hover:scale-105 motion-reduce:transition-none motion-reduce:group-hover:scale-100"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/40 to-transparent" />
+              <div className="absolute inset-x-0 bottom-0 p-5">
+                <h2 className="font-display text-2xl leading-tight text-white">{tutor.name}</h2>
+                <p className="mt-1 text-sm text-white/80">{tutor.role}</p>
               </div>
             </a>
           ))}

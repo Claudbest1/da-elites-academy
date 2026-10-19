@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 @theme inline {
-  --font-sans: var(--font-outfit), ui-sans-serif, system-ui, sans-serif;
-  --font-display: var(--font-fraunces), ui-serif, Georgia, "Times New Roman", serif;
+  --font-sans: var(--font-plus-jakarta), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-plus-jakarta), ui-sans-serif, system-ui, sans-serif;
   --color-ink: #0e1c2f;
   --color-ink-soft: #24364c;
   --color-blue: #1877b5;
@@ -27,6 +27,7 @@
     background: var(--color-sand);
     color: var(--color-ink);
     font-family: var(--font-sans);
+    font-weight: 400;
     overflow-x: clip;
   }
 
@@ -36,6 +37,13 @@
   p {
     text-wrap: wrap;
     overflow-wrap: break-word;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-weight: 800;
+    letter-spacing: -0.03em;
   }
 
   ::selection {
@@ -50,6 +58,11 @@
 }
 
 @layer components {
+  .font-display {
+    font-weight: 800;
+    letter-spacing: -0.03em;
+  }
+
   .surface-rest,
   .surface-card {
     border: 1px solid rgb(213 224 234 / 0.9);
