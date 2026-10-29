@@ -17,9 +17,9 @@ const slides = [
     secondary: { href: "/curriculum", label: "Our curriculum" },
   },
   {
-    eyebrow: "US curriculum",
+    eyebrow: "US, UK, and Canadian curriculum",
     title: "The class your student is actually in.",
-    text: "Homework help and subject teaching stay with the grade and the programme, from elementary school through high school, SAT, AP, and college mathematics.",
+    text: "Homework help and subject teaching stay with the grade and the programme, from elementary school through high school, SAT, AP, GCSE, A-Levels, and college mathematics.",
     image: "/hero/students-together.jpg",
     imageAlt: "Students joining an online class together",
     objectClass: "object-[center_42%]",
