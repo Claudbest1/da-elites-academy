@@ -89,6 +89,7 @@ export function HeroSlider() {
             fill
             priority={itemIndex === 0}
             sizes="100vw"
+            quality={90}
             className={`object-cover ${item.objectClass} ${itemIndex === index ? "kenburns" : ""}`}
           />
           <div className="absolute inset-0 bg-gradient-to-r from-navy via-navy/80 to-navy/25" />
