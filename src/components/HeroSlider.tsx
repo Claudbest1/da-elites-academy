@@ -7,9 +7,9 @@ import { containerClass } from "@/lib/site";
 
 const slides = [
   {
-    eyebrow: "Live tutoring · United States",
+    eyebrow: "Live tutoring · United States, UK, and Canada",
     title: "Personalised tutoring. Stronger results. Greater confidence.",
-    text: "Expert online tutoring for students across the USA. From SAT and AP preparation to college math, French, Yoruba, and coding, every lesson is tailored to help students thrive.",
+    text: "Expert online tutoring for students across the USA, the UK, and Canada. From SAT and AP preparation to college math, French, Yoruba, and coding, every lesson is tailored to help students thrive.",
     image: "/hero/student-home.jpg",
     imageAlt: "A student waving during an online lesson at home",
     objectClass: "object-[62%_center]",
